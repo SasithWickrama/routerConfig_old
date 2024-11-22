@@ -1,0 +1,18 @@
+
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2022-03-24 16:50:03+05:30.
+Info: Latest accessed  IP: 172.25.36.240  Time: 2022-03-24 16:28:52+05:30  Failed: 0
+
+<CX600-X8_TEST_CEA>display current-configuration interface GigabitEthernet 1/0/4 [1D 
+#
+interface GigabitEthernet1/0/4
+ description ## D85000_TEST_CCT ##
+ undo shutdown
+ traffic-policy 201_IN inbound
+ undo dcn
+ user-queue cir 2000 pir 2000 flow-queue 201 inbound
+ user-queue cir 2000 pir 2000 flow-queue 201 outbound
+#
+return
+<CX600-X8_TEST_CEA>
